@@ -1,0 +1,11 @@
+tests/__pycache__/
+migrations/__pycache__
+app/__pycache__/
+*.pyc
+.env
+instance/
+venv/
+config/
+docs/
+backend/
+utils/

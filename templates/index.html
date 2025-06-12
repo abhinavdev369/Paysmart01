@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PayPal Integration</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=AW46nWm3LRXef60NxIaxVtJHyZDioeMN46YtFJ635JUAruHjgk_4FNwhocuxQ9KcsWKLEKxa4GLSHQx4&currency=USD"></script>
+</head>
+<body>
+  <h1>Pay with PayPal</h1>
+  <div id="paypal-button-container"></div>
+
+  <script>
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return fetch("/create-order", {
+          method: "POST"
+        })
+        .then(response => response.json())
+        .then(order => {
+          return order.id;  // PayPal expects order ID
+        });
+      },
+      onApprove: function(data, actions) {
+        return fetch(`/capture-order/${data.orderID}`, {
+          method: "POST"
+        })
+        .then(response => response.json())
+        .then(details => {
+          alert("Transaction completed by " + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>
