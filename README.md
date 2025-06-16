@@ -1,6 +1,6 @@
 <h1 align="center"> PaySmart -FastAPI+PayPal Integration</h1>
-**PaySmart** is a backend **Payment Management System** built using **FastAPI** that integrates **PayPal** for real-time transactions.  
-It supports **user registration**, **wallet funding**, **peer-to-peer (P2P) money transfers**, and **transaction history tracking**, with **PostgreSQL** as the backend database.
+PaySmart is a backend Payment Management System built using FastAPI that integrates PayPal for real-time transactions.  
+It supports user registration, wallet funding, peer-to-peer (P2P) money transfers, and transaction history tracking, with PostgreSQL as the backend database.
 
 ---
 
