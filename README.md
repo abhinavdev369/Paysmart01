@@ -1,26 +1,52 @@
 <h1 align="center"> PaySmart -FastAPI+PayPal Integration</h1>
-PaySmart is a backend Payment management system built using FastAPI that integrates PayPal for real time transactions. It supports user registration,wallet funding,P2P( peer to peer) money transfers , and transaction history tracking using a PostgreSQL database
+**PaySmart** is a backend **Payment Management System** built using **FastAPI** that integrates **PayPal** for real-time transactions.  
+It supports **user registration**, **wallet funding**, **peer-to-peer (P2P) money transfers**, and **transaction history tracking**, with **PostgreSQL** as the backend database.
 
-Features:
--User registration with hashed passwords
--Wallet management (fund wallet and balance)
--Peer to peer transactions between users
--Paypal integration using both Rest API and SDK
--Transaction login with transaction type and status
--PostgreSQL for robust backend development using SQLALchemy
--Pydantic for validation
--Jinja2 template for rendering and static file support
--Authentication using passlib(bcrypt) for hashing 
-🔁 API Endpoints
-Method	Endpoint	Description
-POST	/users/register	Register a new user
-POST	/wallets/fund	Fund wallet using PayPal
-POST	/create-order	Create PayPal order (REST API)
-POST	/capture-order/{order_id}	Capture PayPal order
-GET	/payment/success	Callback for success payment
-GET	/payment/cancel	Callback for canceled payment
-POST	/transactions/p2p	Transfer funds to another user
-POST	/webhook	PayPal webhook listener
-GET	/	Basic HTML UI
+---
 
-Sandbox credentials shall be used for testing
+## 🔧 Features
+
+- 🔐 User registration with hashed passwords
+- 💰 Wallet management (funding and balance tracking)
+- 🔁 Peer-to-peer (P2P) transactions between users
+- 💳 PayPal integration using **REST API** and **SDK**
+- 📜 Transaction logging with type and status
+- 🗄️ PostgreSQL backend using SQLAlchemy ORM
+- ✅ Data validation using **Pydantic**
+- 🧾 Jinja2 templates + static file support
+- 🔑 Password hashing with **Passlib (bcrypt)**
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint                     | Description                              |
+|--------|------------------------------|------------------------------------------|
+| POST   | `/users/register`            | Register a new user                      |
+| POST   | `/wallets/fund`              | Fund wallet using PayPal                 |
+| POST   | `/create-order`              | Create PayPal order (REST API)           |
+| POST   | `/capture-order/{order_id}`  | Capture PayPal order                     |
+| GET    | `/payment/success`           | Callback for successful payment          |
+| GET    | `/payment/cancel`            | Callback for canceled payment            |
+| POST   | `/transactions/p2p`          | Transfer funds to another user           |
+| POST   | `/webhook`                   | PayPal webhook listener                  |
+| GET    | `/`                          | Basic HTML UI using Jinja2 templates     |
+
+---
+
+## 🧪 Testing
+
+- 🧾 Use **PayPal sandbox credentials** for all test transactions.
+- Ensure environment variables like `PAYPAL_CLIENT_ID` and `PAYPAL_CLIENT_SECRET` are set in your `.env` file.
+
+---
+
+## 📂 Tech Stack
+
+- **Backend**: FastAPI
+- **Payment Integration**: PayPal REST API & SDK
+- **Database**: PostgreSQL
+- **ORM**: SQLAlchemy
+- **Authentication**: Passlib (bcrypt)
+- **Templating**: Jinja2
+- **Validation**: Pydantic
