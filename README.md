@@ -53,4 +53,8 @@ It supports user registration, wallet funding, peer-to-peer (P2P) money transfer
 
 IMAGES:
   ![image](https://github.com/user-attachments/assets/b04c52fa-1bef-4068-bb96-9a9a80cc98dc)
+  ![image](https://github.com/user-attachments/assets/606a1338-21ee-481a-addb-51e028c4f985)
+  ![image](https://github.com/user-attachments/assets/6a39d5ec-75e3-4df9-ac38-a13abf0391fd)
+
+
 
